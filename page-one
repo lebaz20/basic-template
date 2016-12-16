@@ -1,31 +1,67 @@
 <!DOCTYPE html>
+<!-- HTML where html file content exists -->
 <html>
+  <!-- Head where files needed to build the page like styles and js files are loaded -->
   <head>
-
+    <title>Pages</title>
+    <!-- Here we are using bootstrap framework and jquery for page styling -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
+  <!-- Body where the actual content of the page exists -->
   <body>
 
+    <!-- Container class improves page layout by adding padding around the text -->
     <div class="container">
+      <!-- Navigation tabs -->
+      <!-- The menu for the pages -->
+      <ul class="nav nav-tabs" role="tablist">
+        <!-- Page one tab -->
+        <!-- On page load first page is the default page, i.e. having active class -->
+        <li class="nav-item active">
+          <!-- As you can see, href attribute holds the id of the correponding tabpanel 'page content' -->
+          <a class="nav-link" data-toggle="tab" href="#pageOne" role="tab">Page one</a>
+        </li>
+        <!-- Page two tab -->
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#pageTwo" role="tab">Page two</a>
+        </li>
+        <!-- Page three tab -->
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#pageThree" role="tab">Page three</a>
+        </li>
+        <!-- To add new tab, We will need to add the following lines -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#pageFour" role="tab">Page four</a>
+        </li> -->
+      </ul>
 
-      <header>
-         <h1>Pages</h1>
-      </header>
-        
-      <nav>
-        <ul>
-          <li><a href="#">Page one</a></li>
-          <li><a href="#">Page two</a></li>
-          <li><a href="#">Page three</a></li>
-        </ul>
-      </nav>
-
-      <article>
-        <h1>Page Title</h1>
-        <p>A very short paragraph.</p>
-      </article>
-
-      <footer>Copyright &copy; The page creator</footer>
-
+      <!-- Tab panes -->
+      <!-- The pages themselves -->
+      <div class="tab-content">
+        <!-- Page one content -->
+        <!-- As you can see, id attribute is the value used to decide which page content to display based on selected tab above -->
+        <div class="tab-pane active" id="pageOne" role="tabpanel">
+          <h3>Page One Title</h3>
+          <p>A very short paragraph for page one.</p>
+        </div>
+        <!-- Page two content -->
+        <div class="tab-pane" id="pageTwo" role="tabpanel">
+          <h3>Page Two Title</h3>
+          <p>A very short paragraph for page two.</p>
+        </div>
+        <!-- Page three content -->
+        <div class="tab-pane" id="pageThree" role="tabpanel">
+          <h3>Page Three Title</h3>
+          <p>A very short paragraph for page three.</p>
+        </div>
+        <!-- To add new page for the newly added tab, We will need to add the following lines -->
+        <!-- <div class="tab-pane" id="pageFour" role="tabpanel">
+          <h3>Page Four Title</h3>
+          <p>A very short paragraph for page four.</p>
+        </div> -->
+      </div>
     </div>
 
   </body>
